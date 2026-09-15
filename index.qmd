@@ -25,4 +25,4 @@ format:
 
 Welcome to COSSEE's coding club repository. 
 
-![hackerman!](figures/hackerman.png){width = 75%}
+![hackerman!](figures/hackerman.png) {width = 75%}
