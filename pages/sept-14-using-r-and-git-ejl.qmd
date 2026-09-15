@@ -135,32 +135,35 @@ I organize my projects like this:
 ```text
 my-repo/
 |
-├── my-repo.RProj
+├── my-repo.RProj             # The .RProj file. See below
 |
-├── scripts/                
-│   ├── 0_data_cleaning
+├── scripts/                  # Scripts
+│   ├── 0_data_cleaning       # Script subdirectories, numbered in order of operation
 |   |    └── 0_load_and_clean_data.R
 |   |    └── 1_check_dependencies.R
 |   ├── 1_analysis
 |   |    └── 0_fit_models.R
 |   |    └── 1_plot_models.R
 |
-├── data/                 # Raw or processed data files
+├── data/                       # Raw data file. These are sacred and rarely manipulated
 │   └── raw_dataset.csv
 │
-├── builds/                 # Processed data files
+├── builds/                     # Processed data. These are rapid outputs made by your scripts
 │   └── 0_processed_dataset.csv
 │   └── 1_dependencies.csv
 |
-├── figures/               # Visual outputs
+├── figures/                    # Visual outputs
 │   └── figure_1.png
 |
-├── pages/               # website pages
+├── pages/                      # website qmd files
 │   └── analysis-tutorial.qmd
 |
-├── index.qmd               # Website tutorial index, which must live in root directory
+├── docs/                       # website html files. Specify in .yml (see the one for this repo) for the rendered html to go here.
+│   └── analysis-tutorial.qmd
 |
-├── _quarto.yml               # The website yaml file that controls webpage formatting and structure
+├── index.qmd                   # Website tutorial index, which must live in root directory
+|
+├── _quarto.yml                 # The website yaml file that controls webpage formatting and structure
 ```
 :::
 
@@ -190,11 +193,11 @@ If you're setting up a parallel directory it should look something like this:
 ::: {.callout-note appearance="simple"}
 
 ```text
-master_folder/                      # Not a Github repo
+master_folder/                      # Not a Github repo. This could be called "bird_ecographic_rules"
 |
-├── my-repo/                        # The github repo
+├── my-repo/                        # The github repo. This might be called "Bergmann_rules"
 |
-├── big-data/                       # A parallel directory for big data that is shared with collaborators
+├── big-data/                       # A directory for big data that is shared via Google Drive with all collaborators
 │   
 ```
 :::
