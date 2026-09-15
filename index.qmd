@@ -25,4 +25,9 @@ format:
 
 Welcome to COSSEE's coding club repository. 
 
-![hackerman!](figures/hackerman.png) {width = 75%}
+::: {style="max-width: 600px;"}
+
+![](figures/hackerman.png)
+
+:::
+
