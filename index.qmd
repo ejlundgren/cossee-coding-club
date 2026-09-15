@@ -1,0 +1,28 @@
+---
+title: "COSSEE Coding Club"
+format: 
+  html:
+    toc: true
+    toc-location: right
+    toc-depth: 6
+    toc-float: true
+    toc-expand: true
+    toc-title: "**On this Page**"
+    output-file: "index.html"
+    code-link: true
+    code-tools: true
+    fontsize: "10"
+    mainfont: "Helvetica"
+    monofont: "Fira Code"
+    page-layout: article
+    code-overflow: wrap
+    df_print: paged
+    theme: cosmo
+    code-line-numbers: false
+    grid:
+      margin-width: 250px
+---
+
+Welcome to COSSEE's coding club repository. 
+
+![hackerman!](figures/hackerman.png)

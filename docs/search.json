@@ -2,11 +2,11 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Using R and Git, COSSEE community page",
+    "title": "COSSEE Coding Club",
     "section": "",
-    "text": "I started this 1 hour before coding club…Let’s see what happens.",
+    "text": "Welcome to COSSEE’s coding club repository.\n\n\n\nhackerman!",
     "crumbs": [
-      "September 14th 2026-Using R and Git"
+      "Welcome to COSSEE Coding Club"
     ]
   },
   {
@@ -46,7 +46,95 @@
     "section": "",
     "text": "hello",
     "crumbs": [
-      "September X 2026-Julia with Shinichi"
+      "September X 2026: Julia with Shinichi"
+    ]
+  },
+  {
+    "objectID": "using R and Git.html",
+    "href": "using R and Git.html",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "",
+    "text": "I started this 1 hour before coding club…Let’s see what happens."
+  },
+  {
+    "objectID": "using R and Git.html#syncing-changes",
+    "href": "using R and Git.html#syncing-changes",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Syncing changes",
+    "text": "Syncing changes\nGithub does not automatically sync changes between your computer and the remote.\nInstead, you have to manage this. This can be quite complex—as github was designed for use by large teams.\nIn science, we rarely need to be as complex. At its simplest, this is how we use Git in COSSEE:\n\nYou toil and toil and finally finish a step: you’ve fit your models! However, there are some models that are weird and you think there might be some errors.\nYou make a commit and title it “model fitting stage 1 complete”. &gt; This saves all of your changes in your repo under this commit name.\nYou “push” the commit to the remote. &gt; This updates the remote with the changes you’ve made locally\nYou describe the problems you were having in the Github Issues page. Since your repo is private, only you and Shinichi have access to this page.\nYou message Shinichi and say, “hey Shinichi, I pushed the model script and I made a detailed Issue in the Issues page”\nShinichi says, “great job! I’ll take a look over the next week”\nAt 3am on Saturday morning, Shinichi finishes looking at your scripts, makes some changes of his own. He’ll then commit those changes and push them to the remote.\nAt 7am, you panic seeing Shinichi’s messages. You fight off your hangover and pull his changes down to review them.\nYou find an error in your original code and you fix it. Everything works like butter and you’re happy as a clam.\n\nJust like that!\nWhen working with more people, things get more complex. That’s when things like branches become important. However, we rarely need these in ecology and evolution, unless working in very large collaborative groups. This degree of complexity needs careful thought because it can easily go wrong."
+  },
+  {
+    "objectID": "using R and Git.html#anatomy-of-rstudio",
+    "href": "using R and Git.html#anatomy-of-rstudio",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Anatomy of RStudio",
+    "text": "Anatomy of RStudio\n 1. This is the Editor window, where you edit and write code including R code and .qmd code. You can execute this code line by line with keyboard shortcuts. These differ between different operating systems and between .qmd files and .R files. You can also Ctrl-A select all and execute the entire script.\n\n.R code is executed here, in the Console. This is where you see the output.\n\nFor example, if the code in the script (‘1’ in the image) was this:\n\n5 * 15\n\nThe output would show up in the Console (‘2’ in the image)\n\n\n\n\n\n\nNote\n\n\n\nIf you prefer working with .qmd files instead of .R files, you can specify to have the output displayed directly in the primary editor window. I don’t like this because it takes up a lot of space. But some people love it. They can add how to do that here, if they want.\n\n\n\nThe environment / history / Git pane. The Environment panel lists the objects loaded in the environment. This pane also sometimes includes a native Git client (like Github Desktop) and a History panel, which shows file changes. I’ve never once used it.\nThis has a few different functions. Files allows you to see the contents of directories. Plots is where figures print. Help is where package documentation shows up. Viewer shows interactive plots. I’ve never used “Presentation”."
+  },
+  {
+    "objectID": "using R and Git.html#use-the-outline-view-in-rstudio.",
+    "href": "using R and Git.html#use-the-outline-view-in-rstudio.",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Use the outline view in RStudio.",
+    "text": "Use the outline view in RStudio.\n\n\noutline button\n\nSee that red circle? Click that puppy. It’ll show you an outline.\nIn a .R script, you can create outline headers with:\n\n# This is an outline header ---------------------------------------\n\n# &gt;&gt;&gt; I use these to create subheadings --------------------------\n\nIn a qmd, you can use “#” to create headings and subheadings, which are section titles."
+  },
+  {
+    "objectID": "pages/using R and Git.html",
+    "href": "pages/using R and Git.html",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "",
+    "text": "I started this 1 hour before coding club…Let’s see what happens.",
+    "crumbs": [
+      "September 14th 2026: Using R and Git"
+    ]
+  },
+  {
+    "objectID": "pages/using R and Git.html#syncing-changes",
+    "href": "pages/using R and Git.html#syncing-changes",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Syncing changes",
+    "text": "Syncing changes\nGithub does not automatically sync changes between your computer and the remote.\nInstead, you have to manage this. This can be quite complex—as github was designed for use by large teams.\nIn science, we rarely need to be as complex. At its simplest, this is how we use Git in COSSEE:\n\nYou toil and toil and finally finish a step: you’ve fit your models! However, there are some models that are weird and you think there might be some errors.\nYou make a commit and title it “model fitting stage 1 complete”.\n\n\nThis saves all of your changes in your repo under this commit name.\n\n\nYou “push” the commit to the remote.\n\n\nThis updates the remote with the changes you’ve made locally\n\n\nYou describe the problems you were having in the Github Issues page. Since your repo is private, only you and collaborators you have invited to the project have access to this page.\nYou message Shinichi and say, “hey Shinichi, I pushed the model script and I made a detailed Issue in the Issues page”\nShinichi says, “great! I’ll take a look over the next week”\nAt 3am the next morning, Shinichi finishes looking at your scripts, makes some changes of his own. He then commits those changes and pushes them to the remote.\nAt 7am, you panic seeing Shinichi’s messages. You fight off your hangover and pull his changes down to review them.\nShinichi found an error in your original code and you fix it. Everything works like butter and you’re happy as a clam.\n\nJust like that!\nWhen working with more people, things get more complex. That’s when things like branches become important. However, we rarely need these in ecology and evolution, unless working in very large collaborative groups. This degree of complexity needs careful thought because it can easily go wrong.",
+    "crumbs": [
+      "September 14th 2026: Using R and Git"
+    ]
+  },
+  {
+    "objectID": "pages/using R and Git.html#anatomy-of-rstudio",
+    "href": "pages/using R and Git.html#anatomy-of-rstudio",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Anatomy of RStudio",
+    "text": "Anatomy of RStudio\n 1. This is the Editor window, where you edit and write code including R code and .qmd code. You can execute this code line by line with keyboard shortcuts. These differ between different operating systems and between .qmd files and .R files. You can also Ctrl-A select all and execute the entire script.\n\n.R code is executed here, in the Console. This is where you see the output.\n\nFor example, if the code in the script (‘1’ in the image) was this:\n\n5 * 15\n\nThe output would show up in the Console (‘2’ in the image)\n\n\n\n\n\n\nNote\n\n\n\nIf you prefer working with .qmd files instead of .R files, you can specify to have the output displayed directly in the primary editor window. I don’t like this because it takes up a lot of space. But some people love it. They can add how to do that here, if they want.\n\n\n\nThe environment / history / Git pane. The Environment panel lists the objects loaded in the environment. This pane also sometimes includes a native Git client (like Github Desktop) and a History panel, which shows file changes. I’ve never once used it.\nThis has a few different functions. Files allows you to see the contents of directories. Plots is where figures print. Help is where package documentation shows up. Viewer shows interactive plots. I’ve never used “Presentation”.",
+    "crumbs": [
+      "September 14th 2026: Using R and Git"
+    ]
+  },
+  {
+    "objectID": "pages/using R and Git.html#use-the-outline-view-in-rstudio.",
+    "href": "pages/using R and Git.html#use-the-outline-view-in-rstudio.",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Use the outline view in RStudio.",
+    "text": "Use the outline view in RStudio.\n\n\noutline button\n\nSee that red circle? Click that puppy. It’ll show you an outline.\nIn a .R script, you can create outline headers with:\n\n# This is an outline header ---------------------------------------\n\n# &gt;&gt;&gt; I use these to create subheadings --------------------------\n\nIn a qmd, you can use “#” to create headings and subheadings, which are section titles.\nA full script might look like this then:\n\n#\n#\n# Clean and process data\n# Written July 14th, 2025\n# Updated September 14th, 2026\n#\n#\n# Clean environment -------------------------------------------------------\nrm(list = ls())\n\n# Load libraries ----------------------------------------------------------\nlibrary(\"dplyr\")\n\n# Load data ---------------------------------------------------------------\ndat &lt;- read.csv(\"data/master_dat.csv\")\n\n# Or if loading \"big data\":\ndat &lt;- read.csv(\"../big-data/master_dataset.csv\")",
+    "crumbs": [
+      "September 14th 2026: Using R and Git"
+    ]
+  },
+  {
+    "objectID": "pages/julia.html",
+    "href": "pages/julia.html",
+    "title": "Julia with Shinichi",
+    "section": "",
+    "text": "hello",
+    "crumbs": [
+      "September 28th 2026: Julia with Shinichi"
+    ]
+  },
+  {
+    "objectID": "pages/using R and Git.html#big-data",
+    "href": "pages/using R and Git.html#big-data",
+    "title": "Github, RStudio, R, and best coding practices",
+    "section": "Big data",
+    "text": "Big data\nGit will get locked up if you try to push files over 25MB or 50MB. It’s possible to install Git large-file-storage (LFS) but it’s never really worked for me.\nThere are two main work arounds.\nOne is to fragment your big data into small pieces. Git wont’ handle a single 25 MB file but can handle 25 1MB files. This is a bit cumbersome but sometimes the best approach, especially if those data files are your actual coding outputs—e.g., from simulations.\nAnother option is to have a separate parallel directory for large data. This is shared directly with collaborators via Google Drive or WeTransfer. This is the preferred option if this large data is static and won’t be directly modified. For example, species range maps.\nIn this case, the outputs of your scripts, derived from the large data, should live in your Github repo and are hopefully &lt;25 or 50 MB.\nIf you’re setting up a parallel directory it should look something like this:\n\n\n\n\n\n\nmaster_folder/                      # Not a Github repo\n|\n├── my-repo/                        # The github repo\n|\n├── big-data/                       # A parallel directory for big data that is shared with collaborators\n│   \n\n\n\nUsing RStudio, and relative paths (see below), you and collaborators can access files in the big-data directory using ../big-data/master_data.csv. The .. moves up the directory structure. These paths should work on anyone’s computer, as long as big-data is in the same relative location to the github repo where your scripts live.",
+    "crumbs": [
+      "September 14th 2026: Using R and Git"
     ]
   }
 ]

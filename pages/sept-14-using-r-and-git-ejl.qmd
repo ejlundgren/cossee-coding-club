@@ -1,5 +1,7 @@
 ---
-title: "Using R and Git, COSSEE community page"
+title: "Github, RStudio, R, and best coding practices"
+date: "2026-09-14"
+author: Erick Lundgren
 format: 
   html:
     toc: true
@@ -8,17 +10,12 @@ format:
     toc-float: true
     toc-expand: true
     toc-title: "**On this Page**"
-    output-file: "index.html"
-    # embed-resources: true
-    # code-fold: true
+    output-file: "using R and Git.html"
     code-link: true
     code-tools: true
-    # number-sections: false
-    # bibliography: ./bib/ref.bib
     fontsize: "10"
     mainfont: "Helvetica"
     monofont: "Fira Code"
-    # fontcolor: ""
     page-layout: article
     code-overflow: wrap
     df_print: paged
@@ -51,7 +48,7 @@ With Github Desktop [(download here)](https://desktop.github.com/download/) you 
 
 In the "Local Path" field, you can specify where on your computer to clone the folder.
 
-![screenshot](figures/Github_Desktop.png)
+![screenshot](../figures/Github_Desktop.png)
 
 ### Cloning with Terminal (Mac, Linux)
 I don't know how to do this on Windows and I don't want to learn.
@@ -96,22 +93,24 @@ In science, we rarely need to be as complex. At its simplest, this is how we use
 1. You toil and toil and finally finish a step: you've fit your models! However, there are some models that are weird and you think there might be some errors.
 
 2. You make a **commit** and title it "model fitting stage 1 complete".
+
 > This saves all of your changes in your repo under this commit name. 
 
 3. You "push" the commit to the remote.
+
 > This updates the **remote** with the changes you've made locally
 
-4. You describe the problems you were having in the Github Issues page. Since your repo is private, only you and Shinichi have access to this page. 
+4. You describe the problems you were having in the **Github Issues** page. Since your repo is private, only you and collaborators you have invited to the project have access to this page. 
 
 5. You message Shinichi and say, "hey Shinichi, I pushed the model script and I made a detailed Issue in the Issues page"
 
-6. Shinichi says, "great job! I'll take a look over the next week"
+6. Shinichi says, "great! I'll take a look over the next week"
 
-7. At 3am on Saturday morning, Shinichi finishes looking at your scripts, makes some changes of his own. He'll then **commit** those changes and **push** them to the remote.
+7. At 3am the next morning, Shinichi finishes looking at your scripts, makes some changes of his own. He then **commits** those changes and **pushes** them to the remote.
 
 8. At 7am, you panic seeing Shinichi's messages. You fight off your hangover and **pull** his changes down to review them.
 
-9. You find an error in your original code and you fix it. Everything works like butter and you're happy as a clam.
+9. Shinichi found an error in your original code and you fix it. Everything works like butter and you're happy as a clam.
 
 Just like that!
 
@@ -120,13 +119,13 @@ When working with more people, things get more complex. That's when things like 
 # Organizing your workspace
 One of the most annoying things is to come back to a project after 8 months in review and to be utterly confused by your own scripts. You labored and labored and labored and you thought you left everything nice and clean but instead your scripts look like this:
 
-"final_analysis_v2.R", "final_final_analysis_v2.R", "master_final_analysis_v2.R".
+**"final_analysis_v2.R", "final_final_analysis_v2.R", "master_final_analysis_v2.R".**
 
 And somehow, they all have the same modification date.
 
 You open those scripts up to figure out which one is up to date. They all opened different versions of your dataset, with names like:
 
-"master_data_final.csv", "final_master_data.csv", "final_final_master_data.csv". 
+**"master_data_final.csv", "final_master_data.csv", "final_final_master_data.csv".** 
 
 That's why data and script hygiene are so important for your mental health.
 
@@ -153,8 +152,15 @@ my-repo/
 │   └── 0_processed_dataset.csv
 │   └── 1_dependencies.csv
 |
-├── figures/               # Visual assets
+├── figures/               # Visual outputs
 │   └── figure_1.png
+|
+├── pages/               # website pages
+│   └── analysis-tutorial.qmd
+|
+├── index.qmd               # Website tutorial index, which must live in root directory
+|
+├── _quarto.yml               # The website yaml file that controls webpage formatting and structure
 ```
 :::
 
@@ -165,6 +171,35 @@ The scripts produce `builds` (or figures). `builds` are cleaned datasets derived
 In the example workflow above, the scripts clean and process the raw_dataset (in `data/raw_dataset.csv`) and produce a 0_processed_dataset.csv in the `builds` directory as well as a `1_dependencies.csv` sidecar file.
 
 The next scripts in `scripts/1_analysis/` then fit models and produce the figure in the `figures` directory.
+
+If you are building a website about your Github project, then you can put detailed webpages in a "pages" directory. However, you must put the home page (`index.qmd`) and the yml file (`_quarto.yml`) in the root directory.
+
+## Big data
+Git will get locked up if you try to push files over 25MB or 50MB. It's possible to install Git large-file-storage (LFS) but it's never really worked for me.
+
+There are two main work arounds.
+
+One is to fragment your big data into small pieces. Git wont' handle a single 25 MB file but can handle 25 1MB files. This is a bit cumbersome but sometimes the best approach, especially if those data files are your actual coding outputs---e.g., from simulations.
+
+Another option is to have a separate parallel directory for large data. This is shared directly with collaborators via Google Drive or WeTransfer. This is the preferred option if this large data is static and won't be directly modified. For example, species range maps.
+
+In this case, the outputs of your scripts, derived from the large data, should live in your Github repo and are hopefully <25 or 50 MB.
+
+If you're setting up a parallel directory it should look something like this:
+
+::: {.callout-note appearance="simple"}
+
+```text
+master_folder/                      # Not a Github repo
+|
+├── my-repo/                        # The github repo
+|
+├── big-data/                       # A parallel directory for big data that is shared with collaborators
+│   
+```
+:::
+
+Using RStudio, and relative paths (see below), you and collaborators can access files in the `big-data` directory using `../big-data/master_data.csv`. The `..` moves **up** the directory structure. These paths should work on anyone's computer, as long as `big-data` is in the same relative location to the github repo where your scripts live. 
 
 # RStudio and R
 
@@ -194,7 +229,7 @@ There are other design environments (e.g., Visual Studio Code). Many of these ha
 
 ## Anatomy of RStudio
 
-![anatomy](figures/Rstudio anatomy.png)
+![anatomy](../figures/Rstudio anatomy.png)
 1. This is the Editor window, where you edit and write code including R code and .qmd code. You can execute this code line by line with keyboard shortcuts. These differ between different operating systems and between .qmd files and .R files. You can also Ctrl-A select all and execute the entire script.
 
 2. .R code is executed here, in the Console. This is where you see the output.
@@ -237,15 +272,13 @@ source("scripts/0_load_and_clean_data.R")
 source("scripts/0_clean_data.R")
 ```
 
-Once the manuscript is written, I think prepare a supplementary website with .qmd files. This is a great chance to also double check your source code before submission.
+3. I then make a website, which is a great supplementary resource to go alongside your paper. For the website, I copy and paste the simplest version of the code from the .R files to .qmd files. I leave out most of the checks and tests that I do in a regular R script.
 
-3. I then write a website. For the website, I copy and paste the simplest version of the code from the .R files to the .qmds. All the extra checks and tests that I do in a regular R script I leave out.
-
-One of the reasons I work this way is because I fill my .R scripts with these types of extra checks and tests. Checking that the number of rows is as expected, that no factor levels have gone missing, etc. I also frequently, many many times in a session, select all the code above my current line and rerun to make sure that the code works as anticipated (and always include a `rm(list = ls())` call at the top of your script.)
+One of the reasons I work this way is because I fill my .R scripts with millions of extra checks and tests. E.g., checking that the number of rows is as expected, that no factor levels have gone missing, etc. I also frequently, many many times in a session, select all the code above my current line and rerun to make sure that the code works as anticipated (and always include a `rm(list = ls())` call at the top of my script.)
 
 With that, let's talk about coding best practices:
 
-# Coding best practices (in my humble opinion)
+# Coding best practices (in my opinion)
 
 Start every project with a comment specifying what the script is for. Scripts should be for short, modular operations, like loading and cleaning data, creating a table of models to run, calculating effect sizes, or fitting models. Doing too much in a script can make bulky chokepoints.
 
@@ -274,11 +307,15 @@ Why?
 
 Because one of the biggest reasons that code fails is that it was running off an object from a different script (or earlier version).
 
-For example, imagine in script 1 you have an object called `dat`. You finish script 1 and move on to script 2. You start writing code, thinking that you remembered to load a different dataset, which you also called `dat`. Your code works great. You think you're done. You come back next week and none of your code works. The columns don't exist. You feel like a lost, bitter, and hopeless fool.
+For example, imagine in script 1 you have an object called `dat`. You finish script 1 and move on to script 2. You start writing code, thinking that you loaded a different dataset, which you also called `dat`. Your code works great. You think you're done. You come back next week and none of your code works. The columns don't exist. You feel like a lost, bitter, and hopeless fool.
+
+All of this was because of a dirty environment. Keep your scripts tidy, with a simple focus, and clean the environment between each one :) 
+
+This also helps you break complex steps into modular, easier to understand steps.
 
 ## Use the outline view in RStudio.
 
-![outline button](figures/Rstudio anatomy 2.png)
+![outline button](../figures/Rstudio anatomy 2.png)
 
 See that red circle? Click that puppy. It'll show you an outline.
 
@@ -291,3 +328,36 @@ In a .R script, you can create outline headers with:
 ```
 
 In a qmd, you can use "#" to create headings and subheadings, which are section titles.
+
+A full script might look like this then:
+
+```{r}
+#| eval: false
+#
+#
+# Clean and process data
+# Written July 14th, 2025
+# Updated September 14th, 2026
+#
+#
+# Clean environment -------------------------------------------------------
+rm(list = ls())
+
+# Load libraries ----------------------------------------------------------
+library("dplyr")
+
+# Load data ---------------------------------------------------------------
+dat <- read.csv("data/master_dat.csv")
+
+# Or if loading "big data":
+dat <- read.csv("../big-data/master_dataset.csv")
+```
+
+# Explore
+Please clone this repo by navigating to https://github.com/ejlundgren/cossee-coding-club and following the steps above.
+
+Then run the `Sept 14 R stuff.R` script I put in the `scripts` directory. Run the script line-by-line and try to understand what each line is doing. 
+
+Running scripts line by line can be done with Command or Ctrl + Enter. 
+
+
