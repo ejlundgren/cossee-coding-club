@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Using R and Git, COSSEE community page",
+    "section": "",
+    "text": "I started this 1 hour before coding club…Let’s see what happens.",
+    "crumbs": [
+      "September 14th 2026-Using R and Git"
+    ]
+  },
+  {
+    "objectID": "index.html#syncing-changes",
+    "href": "index.html#syncing-changes",
+    "title": "Using R and Git, COSSEE community page",
+    "section": "Syncing changes",
+    "text": "Syncing changes\nGithub does not automatically sync changes between your computer and the remote.\nInstead, you have to manage this. This can be quite complex—as github was designed for use by large teams.\nIn science, we rarely need to be as complex. At its simplest, this is how we use Git in COSSEE:\n\nYou toil and toil and finally finish a step: you’ve fit your models! However, there are some models that are weird and you think there might be some errors.\nYou make a commit and title it “model fitting stage 1 complete”. &gt; This saves all of your changes in your repo under this commit name.\nYou “push” the commit to the remote. &gt; This updates the remote with the changes you’ve made locally\nYou describe the problems you were having in the Github Issues page. Since your repo is private, only you and Shinichi have access to this page.\nYou message Shinichi and say, “hey Shinichi, I pushed the model script and I made a detailed Issue in the Issues page”\nShinichi says, “great job! I’ll take a look over the next week”\nAt 3am on Saturday morning, Shinichi finishes looking at your scripts, makes some changes of his own. He’ll then commit those changes and push them to the remote.\nAt 7am, you panic seeing Shinichi’s messages. You fight off your hangover and pull his changes down to review them.\nYou find an error in your original code and you fix it. Everything works like butter and you’re happy as a clam.\n\nJust like that!\nWhen working with more people, things get more complex. That’s when things like branches become important. However, we rarely need these in ecology and evolution, unless working in very large collaborative groups. This degree of complexity needs careful thought because it can easily go wrong.",
+    "crumbs": [
+      "September 14th 2026-Using R and Git"
+    ]
+  },
+  {
+    "objectID": "index.html#anatomy-of-rstudio",
+    "href": "index.html#anatomy-of-rstudio",
+    "title": "Using R and Git, COSSEE community page",
+    "section": "Anatomy of RStudio",
+    "text": "Anatomy of RStudio\n 1. This is the Editor window, where you edit and write code including R code and .qmd code. You can execute this code line by line with keyboard shortcuts. These differ between different operating systems and between .qmd files and .R files. You can also Ctrl-A select all and execute the entire script.\n\n.R code is executed here, in the Console. This is where you see the output.\n\nFor example, if the code in the script (‘1’ in the image) was this:\n\n5 * 15\n\nThe output would show up in the Console (‘2’ in the image)\n\n\n\n\n\n\nNote\n\n\n\nIf you prefer working with .qmd files instead of .R files, you can specify to have the output displayed directly in the primary editor window. I don’t like this because it takes up a lot of space. But some people love it. They can add how to do that here, if they want.\n\n\n\nThe environment / history / Git pane. The Environment panel lists the objects loaded in the environment. This pane also sometimes includes a native Git client (like Github Desktop) and a History panel, which shows file changes. I’ve never once used it.\nThis has a few different functions. Files allows you to see the contents of directories. Plots is where figures print. Help is where package documentation shows up. Viewer shows interactive plots. I’ve never used “Presentation”.",
+    "crumbs": [
+      "September 14th 2026-Using R and Git"
+    ]
+  },
+  {
+    "objectID": "index.html#use-the-outline-view-in-rstudio.",
+    "href": "index.html#use-the-outline-view-in-rstudio.",
+    "title": "Using R and Git, COSSEE community page",
+    "section": "Use the outline view in RStudio.",
+    "text": "Use the outline view in RStudio.\n\n\noutline button\n\nSee that red circle? Click that puppy. It’ll show you an outline.\nIn a .R script, you can create outline headers with:\n\n# This is an outline header ---------------------------------------\n\n# &gt;&gt;&gt; I use these to create subheadings --------------------------\n\nIn a qmd, you can use “#” to create headings and subheadings, which are section titles.",
+    "crumbs": [
+      "September 14th 2026-Using R and Git"
+    ]
+  },
+  {
+    "objectID": "julia.html",
+    "href": "julia.html",
+    "title": "Julia with Shinichi",
+    "section": "",
+    "text": "hello",
+    "crumbs": [
+      "September X 2026-Julia with Shinichi"
+    ]
+  }
+]

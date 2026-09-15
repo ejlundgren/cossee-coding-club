@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+  
+editor: 
+  mode: source
+
+website:
+  title: "COSSEECC!"
+  favicon: icons/temp_logo.png
+  sidebar:
+    title: "COSSEE Coding Club (COSSEE-CC)"
+    logo: icons/cossee_logo.png
+    style: "docked"
+    search: true
+    contents:
+      - text: "<b>2026 Fall Table of Contents</b>"
+      - href: using R and Git.qmd
+        text: "September 14th 2026-Using R and Git"
+      - href: shinichi julia.qmd
+        text: "September X 2026-Julia with Shinichi"
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
