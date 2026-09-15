@@ -40,7 +40,7 @@ We start by **cloning** repos. This allows you to copy the entirey of a project 
 
 Clone this repo by going [here](https://github.com/ejlundgren/r_git_demo).
 
-To clone, copy the URL (the URL that ends in .git). Sometimes you have to push the Green "code" button.
+To clone, copy the URL (the URL that ends in .git). To see the URL you have to push the green "Code" button.
 
 ### Cloning with Github desktop
 
@@ -158,8 +158,9 @@ my-repo/
 ├── pages/                      # website qmd files
 │   └── analysis-tutorial.qmd
 |
-├── docs/                       # website html files. Specify in .yml (see the one for this repo) for the rendered html to go here.
-│   └── analysis-tutorial.qmd
+├── docs/                       # website html files which can be rendered to this location automatically
+│   └── analysis-tutorial.html  # Specify in .yml (see the one for this repo) for the rendered html to go here.
+|   └── index.html
 |
 ├── index.qmd                   # Website tutorial index, which must live in root directory
 |
@@ -193,9 +194,10 @@ If you're setting up a parallel directory it should look something like this:
 ::: {.callout-note appearance="simple"}
 
 ```text
-master_folder/                      # Not a Github repo. This could be called "bird_ecographic_rules"
+master_folder/                      # Not a Github repo. This could be called "bird_ecogeographic_rules"
 |
-├── my-repo/                        # The github repo. This might be called "Bergmann_rules"
+├── my-repo/                        # The github repo. This might be called "bergmans_rule". 
+|                                   # There might be other parallel repos that use the same big-data as well
 |
 ├── big-data/                       # A directory for big data that is shared via Google Drive with all collaborators
 │   
