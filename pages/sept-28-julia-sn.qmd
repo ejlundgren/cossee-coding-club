@@ -28,4 +28,6 @@ format:
       margin-width: 250px
 ---
 
-hello
+Please see the repo that Shinichi prepared: https://github.com/itchyshin/Julia-Time
+
+Follow instructions on how to install the app Shinichi prepared as well as installing Julia itself. 
