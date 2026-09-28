@@ -28,6 +28,23 @@ format:
       margin-width: 250px
 ---
 
-Please see the repo that Shinichi prepared [here](https://github.com/itchyshin/Julia-Time)
+Please see the repo that Shinichi prepared [here](https://github.com/itchyshin/Julia-Time). 
 
-Follow instructions on how to install the app Shinichi prepared as well as installing Julia itself. 
+And download the powerpoint here:
+
+```{r}
+#| echo: false
+
+library("downloadthis")
+
+download_file(path = "../presentations/2026-09-28-julia-intro-lab-meeting-v2.pptx",
+                output_name = "julia-and-r",
+                output_extension = ".pptx",
+                button_label = "Download ppt presentation",
+                button_type = "primary", # Controls styling 
+                has_icon = TRUE,
+                icon = "fa fa-save")
+
+```
+
+
