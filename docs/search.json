@@ -122,7 +122,7 @@
     "href": "pages/julia.html",
     "title": "Julia with Shinichi",
     "section": "",
-    "text": "Please see the repo that Shinichi prepared here.\nAnd download the powerpoint here:\n\n\n Download ppt presentation",
+    "text": "Please see the repo that Shinichi prepared here.\nAnd download his powerpoint here:\n\n\n Download ppt presentation\n\n\nSome tutorials and vignettes:\nAnd here are some other tutorials we stumbled across:\nSpatial Ecology in Julia\nMaking plots in Julia",
     "crumbs": [
       "September 28th 2026: Julia with Shinichi"
     ]
@@ -135,6 +135,16 @@
     "text": "Big data\nGit will get locked up if you try to push files over 25MB or 50MB. It’s possible to install Git large-file-storage (LFS) but it’s never really worked for me.\nThere are two main work arounds.\nOne is to fragment your big data into small pieces. Git wont’ handle a single 25 MB file but can handle 25 1MB files. This is a bit cumbersome but sometimes the best approach, especially if those data files are your actual coding outputs—e.g., from simulations.\nAnother option is to have a separate parallel directory for large data. This is shared directly with collaborators via Google Drive or WeTransfer. This is the preferred option if this large data is static and won’t be directly modified. For example, species range maps.\nIn this case, the outputs of your scripts, derived from the large data, should live in your Github repo and are hopefully &lt;25 or 50 MB.\nIf you’re setting up a parallel directory it should look something like this:\n\n\n\n\n\n\nmaster_folder/                      # Not a Github repo. This could be called \"bird_ecogeographic_rules\"\n|\n├── my-repo/                        # The github repo. This might be called \"bergmans_rule\". \n|                                   # There might be other parallel repos that use the same big-data as well\n|\n├── big-data/                       # A directory for big data that is shared via Google Drive with all collaborators\n│   \n\n\n\nUsing RStudio, and relative paths (see below), you and collaborators can access files in the big-data directory using ../big-data/master_data.csv. The .. moves up the directory structure. These paths should work on anyone’s computer, as long as big-data is in the same relative location to the github repo where your scripts live.",
     "crumbs": [
       "September 14th 2026: Using R and Git"
+    ]
+  },
+  {
+    "objectID": "pages/julia.html#some-tutorials-and-vignettes",
+    "href": "pages/julia.html#some-tutorials-and-vignettes",
+    "title": "Julia with Shinichi",
+    "section": "Some tutorials and vignettes:",
+    "text": "Some tutorials and vignettes:\nAnd here are some other tutorials we stumbled across:\nSpatial Ecology in Julia\nMaking plots in Julia",
+    "crumbs": [
+      "September 28th 2026: Julia with Shinichi"
     ]
   }
 ]

@@ -30,7 +30,7 @@ format:
 
 Please see the repo that Shinichi prepared [here](https://github.com/itchyshin/Julia-Time). 
 
-And download the powerpoint here:
+And download his powerpoint here:
 
 ```{r}
 #| echo: false
@@ -46,5 +46,14 @@ download_file(path = "../presentations/2026-09-28-julia-intro-lab-meeting-v2.ppt
                 icon = "fa fa-save")
 
 ```
+
+### Some tutorials and vignettes:
+
+And here are some other tutorials we stumbled across:
+
+[Spatial Ecology in Julia](https://docs.ecojulia.org/SpatialEcology.jl/stable/tutorial/)
+
+[Making plots in Julia](https://envsys.viveks.me/fall2022/tutorials/julia-plots/)
+
 
 
