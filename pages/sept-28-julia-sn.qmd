@@ -47,7 +47,7 @@ download_file(path = "../presentations/2026-09-28-julia-intro-lab-meeting-v2.ppt
 
 ```
 
-### Some tutorials and vignettes:
+### Some other tutorials and vignettes:
 
 And here are some other tutorials we stumbled across:
 
@@ -55,5 +55,5 @@ And here are some other tutorials we stumbled across:
 
 [Making plots in Julia](https://envsys.viveks.me/fall2022/tutorials/julia-plots/)
 
-
+[Ecological Analyses in Julia](https://esantos2ua.github.io/EcologicalAnalysesInJulia/)
 

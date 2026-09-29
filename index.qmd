@@ -23,7 +23,7 @@ format:
       margin-width: 250px
 ---
 
-Welcome to COSSEE's coding club repository. 
+Welcome to COSSEE's coding club repository. This is the repository for informal coding discussions, tutorials, etc. Nothing has been proofread. 
 
 ::: {style="max-width: 600px;"}
 
